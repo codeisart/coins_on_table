@@ -319,24 +319,24 @@ public:
 	}
 
 	bool tick()
-    {
-        bool resting = false; 
+	{
+		bool resting = false; 
 		char c = m_board[linearPos(m_coinX,m_coinY)]; 
-        switch(c)
-        {           
+		switch(c)
+		{           
 			case 'U': 
-                m_coinY--; 
-                break;
-            case 'D': 
-                m_coinY++;
-                break;
-            case 'L':
+				m_coinY--; 
+				break;
+			case 'D': 
+				m_coinY++;
+				break;
+			case 'L':
 				m_coinX--;
 				break;
-            case 'R':
+			case 'R':
 				m_coinX++;
 				break;
-            case '*':
+			case '*':
 				resting = true;
 				break;
 			default:
@@ -344,7 +344,7 @@ public:
 		}
 		DEBUG_OUT("t");
 		return resting;
-    }
+	}
 
 	void display()
 	{
